@@ -18,9 +18,10 @@ while (playerTwo == "" || playerTwo == null) {
   playerTwo = prompt("Player 2 (Yellow) - Please enter your name");
 }
 
-let currentPlayer = 1;
-const playerTurn = document.querySelector(".current-player");
-playerTurn.innerText = `${playerOne} (Red)'s turn`;
+let playerTurn = 1;
+const currentPlayer = document.querySelector(".current-player");
+currentPlayer.innerText = `${playerOne}'s turn`;
+currentPlayer.style.color = playerOneColour;
 
 // ======================================================================
 // Add event listener to each cell using forEach to show rowIndex, cellIndex of clicked cell
@@ -61,25 +62,27 @@ function changeColour(e) {
 
       // Alternate between players, Runs function to check for winning/draw condition below, alert showing game outcome, resets game
 
-      if (currentPlayer === 1) {
+      if (playerTurn === 1) {
         arrWhiteCell[0].style.backgroundColor = playerOneColour;
         if (checkWin()) {
-          return alert(`${playerOne} (Red) wins!`), resetBoard();
+          return alert(`${playerOne} wins!`), resetBoard();
         } else if (checkDraw()) {
           return alert("Game is a draw!"), resetBoard();
         } else {
-          playerTurn.innerText = `${playerTwo} (Yellow)'s turn`;
-          return (currentPlayer = 2);
+          currentPlayer.innerText = `${playerTwo}'s turn`;
+          currentPlayer.style.color = playerTwoColour;
+          return (playerTurn = 2);
         }
       } else {
         arrWhiteCell[0].style.backgroundColor = playerTwoColour;
         if (checkWin()) {
-          return alert(`${playerTwo} (Yellow) wins!`), resetBoard();
+          return alert(`${playerTwo} wins!`), resetBoard();
         } else if (checkDraw()) {
           return alert("Game is a draw!"), resetBoard();
         } else {
-          playerTurn.innerText = `${playerOne} (Red)'s turn`;
-          return (currentPlayer = 1);
+          currentPlayer.innerText = `${playerOne}'s turn`;
+          currentPlayer.style.color = playerOneColour;
+          return (playerTurn = 1);
         }
       }
     }
@@ -181,7 +184,10 @@ function checkWin() {
 function checkDraw() {
   let arrColoured = [];
   for (i = 0; i < gridCell.length; i++) {
-    if (gridCell[i].style.backgroundColor != "white") {
+    if (
+      gridCell[i].style.backgroundColor == "red" ||
+      gridCell[i].style.backgroundColor == "yellow"
+    ) {
       arrColoured.push(gridCell[i]);
     }
   }
@@ -201,8 +207,9 @@ function resetBoard() {
   gridCell.forEach((cell) => {
     cell.style.backgroundColor = "white";
   });
-  playerTurn.innerText = `${playerOne} (Red)'s turn`;
-  return (currentPlayer = 1);
+  currentPlayer.innerText = `${playerOne}'s turn`;
+  currentPlayer.style.color = playerOneColour;
+  return (playerTurn = 1);
 }
 
 resetButton.addEventListener("click", resetBoard);
