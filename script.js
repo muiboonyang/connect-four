@@ -107,7 +107,7 @@ function checkFour(a, b, c, d) {
 // ======================================================================
 
 // ========================
-// 1) Horizontal
+// 1) Horizontal --
 // ========================
 
 function checkWin() {
@@ -124,7 +124,7 @@ function checkWin() {
         return true;
 
   // ========================
-  // 2) Veritical
+  // 2) Veritical |
   // ========================
 
   for (let r = 3; r <= 5; r++)
@@ -140,7 +140,7 @@ function checkWin() {
         return true;
 
   // ========================
-  // 3) Diagonal (Upwards)
+  // 3) Diagonal / (Up-Right)
   // ========================
 
   for (let r = 3; r <= 5; r++)
@@ -156,7 +156,7 @@ function checkWin() {
         return true;
 
   // ========================
-  // 4) Diagonal (Downwards)
+  // 4) Diagonal \ (Down-Right)
   // ========================
 
   for (let r = 0; r <= 2; r++)
