@@ -19,7 +19,7 @@ A classic game of Connect Four made with JavaScript.
 </ul>
 
 <h2>Others</h2>
-<a href="https://github.com/muiboonyang/connect-four/tree/main/slides" target="_blank">Click here to find out more!</a>
+<a href="https://github.com/muiboonyang/connect-four/tree/main/slides" target="_blank">Click here to read more</a>
 <ul>
 <li>Key challenges 
 <li>Concepts applied
