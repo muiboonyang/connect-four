@@ -2,7 +2,8 @@
 Made for SEI33 - Project 1
 
 <h2>Introduction</h2>
-<a href="https://muiboonyang.github.io/connect-four/" target="_blank">Try out a classic game of Connect Four made with JavaScript!</a>
+A classic game of Connect Four made with JavaScript!
+<a href="https://muiboonyang.github.io/connect-four/" target="_blank">Try it out here!</a>
 
 <h2>Game Features</h2>
 <ul>
