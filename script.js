@@ -163,7 +163,7 @@ function checkWin() {
     for (let c = 0; c <= 3; c++)
       if (
         checkFour(
-          gridRow[r].children[c],
+          gridRow[r].children[c].style.backgroundColor,
           gridRow[r + 1].children[c + 1].style.backgroundColor,
           gridRow[r + 2].children[c + 2].style.backgroundColor,
           gridRow[r + 3].children[c + 3].style.backgroundColor
