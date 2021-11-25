@@ -18,7 +18,7 @@ Try out a classic game of Connect Four made with JavaScript!
 </ul>
 
 <h2>Others</h2>
-Click here to find out more!
+<a href="https://github.com/muiboonyang/connect-four/tree/main/slides" target="_blank">Click here to find out more!</a>
 <ul>
 <li>Key challenges 
 <li>Concepts applied
