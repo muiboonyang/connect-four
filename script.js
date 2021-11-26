@@ -26,7 +26,7 @@ currentPlayer.style.color = playerOneColour;
 // ======================================================================
 // Add event listener to each cell using forEach to show rowIndex, cellIndex of clicked cell
 // e.target: clicked cell <td>
-// e.target.parentElement: parent element <tr> of clicked cell
+// e.target.parentElement: parent element of clicked cell <tr>
 // ======================================================================
 
 gridCell.forEach((cell) => {
@@ -59,8 +59,9 @@ function changeColour(e) {
 
       // Shows which cell (HTML) gets pushed into the array
       // console.log(gridRow[i].children[selectedCell]);
+      // console.log(arrWhiteCell);
 
-      // Alternate between players, Runs function to check for winning/draw condition below, alert showing game outcome, resets game
+      // Alternate between players, Runs function to check for winning/draw condition below, alert showing game outcome, resets board
 
       if (playerTurn === 1) {
         arrWhiteCell[0].style.backgroundColor = playerOneColour;
@@ -97,7 +98,7 @@ gridCell.forEach((e) => e.addEventListener("click", changeColour));
 // ======================================================================
 
 function checkFour(a, b, c, d) {
-  return a != "white" && a == b && a == c && a == d;
+  return (a == "red" || a == "yellow") && a == b && a == c && a == d;
 }
 
 // ======================================================================
