@@ -1,7 +1,7 @@
 {
   "name": "connect-four",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "public/script.js",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
