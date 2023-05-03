@@ -4,7 +4,7 @@ Made for SEI33 - Project 1
 <h2>Introduction</h2>
 A classic game of Connect Four made with JavaScript.
 <br>
-<br><a href="https://muiboonyang.github.io/connect-four/" target="_blank">Try it out here!</a>
+<br><a href="https://connect-four-sg.herokuapp.com/" target="_blank">Try it out here!</a>
 
 <h2>Game Features</h2>
 <ul>
