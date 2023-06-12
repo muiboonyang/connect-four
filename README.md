@@ -3,6 +3,7 @@ Made for SEI33 - Project 1
 
 <h2>Introduction</h2>
 A classic game of Connect Four made with JavaScript.
+<br>This app is hosted on Heroku
 <br>
 <br><a href="https://connect-four-sg.herokuapp.com/" target="_blank">Try it out here!</a>
 
